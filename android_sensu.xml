@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="android_sensu" default="all">
+  
+  
+  <property file="android_sensu.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/rcs/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/.pyc/**"/>
+    <exclude name="**/.pyo/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/*.lib/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/.bundle/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.orig/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.zip"/>
+    <include name="*.apk"/>
+    <include name="*.war"/>
+    <include name="*.egg"/>
+    <include name="*.ear"/>
+    <include name="*.ane"/>
+    <include name="*.swc"/>
+    <include name="*.jar"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.android_api_21_platform" value="${jdk.home.android_api_21_platform}/../../../../../Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/bin"/>
+  <path id="jdk.classpath.android_api_21_platform">
+    <fileset dir="${jdk.home.android_api_21_platform}">
+      <include name="platforms/android-21/android.jar"/>
+      <include name="platforms/android-21/data/res"/>
+      <include name="tools/support/annotations.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.7}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.7}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.7"/>
+  
+  
+  <!-- Project Libraries -->
+
+  <path id="library.android-support-v41.classpath">
+    <pathelement location="${basedir}/libs/android-support-v4.jar"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <pathelement location="${javac2.home}/javac2.jar"/>
+    <pathelement location="${javac2.home}/jdom.jar"/>
+    <pathelement location="${javac2.home}/asm4-all.jar"/>
+    <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module Android_Sensu -->
+  
+  <dirname property="module.android_sensu.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.android_sensu" value="${jdk.home.android_api_21_platform}"/>
+  <property name="module.jdk.bin.android_sensu" value="${jdk.bin.android_api_21_platform}"/>
+  <property name="module.jdk.classpath.android_sensu" value="jdk.classpath.android_api_21_platform"/>
+  
+  <property name="compiler.args.android_sensu" value="-encoding UTF-8 -source 1.6 -target 1.7 ${compiler.args}"/>
+  
+  <property name="android_sensu.output.dir" value="${module.android_sensu.basedir}/out/production/Android_Sensu"/>
+  <property name="android_sensu.testoutput.dir" value="${module.android_sensu.basedir}/out/test/Android_Sensu"/>
+  
+  <path id="android_sensu.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="android_sensu.module.production.classpath">
+    <path refid="${module.jdk.classpath.android_sensu}"/>
+    <path refid="library.android-support-v41.classpath"/>
+    <path refid="library.af-android-sdk-v2.3.1.16.classpath"/>
+  </path>
+  
+  <path id="android_sensu.runtime.production.module.classpath">
+    <pathelement location="${android_sensu.output.dir}"/>
+    <path refid="library.android-support-v41.classpath"/>
+    <path refid="library.af-android-sdk-v2.3.1.16.classpath"/>
+  </path>
+  
+  <path id="android_sensu.module.classpath">
+    <path refid="${module.jdk.classpath.android_sensu}"/>
+    <pathelement location="${android_sensu.output.dir}"/>
+    <path refid="library.android-support-v41.classpath"/>
+    <path refid="library.af-android-sdk-v2.3.1.16.classpath"/>
+  </path>
+  
+  <path id="android_sensu.runtime.module.classpath">
+    <pathelement location="${android_sensu.testoutput.dir}"/>
+    <pathelement location="${android_sensu.output.dir}"/>
+    <path refid="library.android-support-v41.classpath"/>
+    <path refid="library.af-android-sdk-v2.3.1.16.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.android_sensu">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.android_sensu">
+    <patternset refid="excluded.from.module.android_sensu"/>
+  </patternset>
+  
+  <path id="android_sensu.module.sourcepath">
+    <dirset dir="${module.android_sensu.basedir}">
+      <include name="gen"/>
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.android_sensu" depends="compile.module.android_sensu.production,compile.module.android_sensu.tests" description="Compile module Android_Sensu"/>
+  
+  <target name="compile.module.android_sensu.production" depends="register.custom.compilers" description="Compile module Android_Sensu; production classes">
+    <mkdir dir="${android_sensu.output.dir}"/>
+    <javac2 destdir="${android_sensu.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.android_sensu}/javac">
+      <compilerarg line="${compiler.args.android_sensu}"/>
+      <bootclasspath refid="android_sensu.module.bootclasspath"/>
+      <classpath refid="android_sensu.module.production.classpath"/>
+      <src refid="android_sensu.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.android_sensu"/>
+    </javac2>
+    
+    <copy todir="${android_sensu.output.dir}">
+      <fileset dir="${module.android_sensu.basedir}/gen">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.android_sensu.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.android_sensu.tests" depends="register.custom.compilers,compile.module.android_sensu.production" description="compile module Android_Sensu; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.android_sensu" description="cleanup module">
+    <delete dir="${android_sensu.output.dir}"/>
+    <delete dir="${android_sensu.testoutput.dir}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.android_sensu" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.android_sensu" description="build all modules"/>
+  
+  <target name="all" depends="build.modules" description="build all"/>
+</project>

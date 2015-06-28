@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:weightSum="1" android:background="@color/white_color">
+
+
+    <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+        <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event Machine:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/title_text_color"
+                android:textSize="@dimen/font_size_large"/>
+
+        <TextView
+                android:id="@+id/txEventMachine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event_machine:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textSize="@dimen/font_size_large"
+                android:textColor="@color/black_color" android:layout_marginLeft="15dp"/>
+
+    </TableRow>
+
+
+    <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+        <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event Name:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/title_text_color"
+                android:textSize="@dimen/font_size_large"/>
+
+        <TextView
+                android:id="@+id/txEventName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event_machine:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textSize="@dimen/font_size_large"
+                android:textColor="@color/black_color" android:layout_marginLeft="15dp"/>
+
+    </TableRow>
+
+
+
+    <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+        <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/title_text_color"
+                android:textSize="@dimen/font_size_large"/>
+
+        <TextView
+                android:id="@+id/txEventHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event_machine:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textSize="@dimen/font_size_large"
+                android:textColor="@color/black_color" android:layout_marginLeft="15dp"/>
+
+    </TableRow>
+
+    <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+        <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Occurrences:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/title_text_color"
+                android:textSize="@dimen/font_size_large"/>
+
+        <TextView
+                android:id="@+id/txOccur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="occur"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textSize="@dimen/font_size_large"
+                android:textColor="@color/black_color" android:layout_marginLeft="15dp"/>
+
+    </TableRow>
+
+
+    <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+        <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Executed:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/title_text_color"
+                android:textSize="@dimen/font_size_large"/>
+
+        <TextView
+                android:id="@+id/txExec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="exec"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textSize="@dimen/font_size_large"
+                android:textColor="@color/black_color" android:layout_marginLeft="15dp"/>
+
+    </TableRow>
+
+
+    <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+        <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Issued:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/title_text_color"
+                android:textSize="@dimen/font_size_large"/>
+
+        <TextView
+                android:id="@+id/txIssued"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="issued"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textSize="@dimen/font_size_large"
+                android:textColor="@color/black_color" android:layout_marginLeft="15dp"/>
+
+    </TableRow>
+
+    <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+        <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Handlers:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/title_text_color"
+                android:textSize="@dimen/font_size_large"/>
+
+        <TextView
+                android:id="@+id/txHandlers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="handlers"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textSize="@dimen/font_size_large"
+                android:textColor="@color/black_color" android:layout_marginLeft="15dp"/>
+
+    </TableRow>
+
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Stash Event"
+            android:id="@+id/button" android:onClick="onStashClick" android:background="@drawable/stash_button"
+            android:layout_marginLeft="70dp" android:layout_marginTop="20dp" android:layout_marginRight="70dp"/>
+</LinearLayout>

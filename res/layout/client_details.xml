@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:weightSum="1" android:background="@color/white_color">
+
+
+
+
+    <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+        <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Client Name:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/title_text_color"
+                android:textSize="@dimen/font_size_large"/>
+
+        <TextView
+                android:id="@+id/txClientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="client_name:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textSize="@dimen/font_size_large"
+                android:textColor="@color/black_color" android:layout_marginLeft="15dp"/>
+
+    </TableRow>
+
+
+
+    <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+        <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/title_text_color"
+                android:textSize="@dimen/font_size_large"/>
+
+        <TextView
+                android:id="@+id/txAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="addr:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textSize="@dimen/font_size_large"
+                android:textColor="@color/black_color" android:layout_marginLeft="15dp"/>
+
+    </TableRow>
+
+
+    <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+        <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subscription:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/title_text_color"
+                android:textSize="@dimen/font_size_large"/>
+
+        <TextView
+                android:id="@+id/txSubs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="subs:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textSize="@dimen/font_size_large"
+                android:textColor="@color/black_color" android:layout_marginLeft="15dp"/>
+
+    </TableRow>
+
+
+    <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+        <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="@color/title_text_color"
+                android:textSize="@dimen/font_size_large"/>
+
+        <TextView
+                android:id="@+id/txVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ver:"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:textSize="@dimen/font_size_large"
+                android:textColor="@color/black_color" android:layout_marginLeft="15dp"/>
+
+    </TableRow>
+
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Delete Client"
+            android:id="@+id/button" android:onClick="onClientDetailsStash" android:background="@drawable/stash_button"
+            android:layout_marginLeft="70dp" android:layout_marginTop="20dp" android:layout_marginRight="70dp"
+
+            />
+
+</LinearLayout>
+
+
+
+
+
